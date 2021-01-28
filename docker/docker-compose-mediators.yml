@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  core-mediator:
+    build: ..
+    image: aries-framework-javascript
+    command: ./scripts/run-mediator.sh core-mediator
+    networks:
+      - hyperledger
+    ports:
+      - 3001:3001
+
+
+
+networks:
+  hyperledger:
